@@ -106,27 +106,6 @@ This project was developed as part of an academic team project to enhance practi
 
 ---
 
-## 📂 Repository Structure
-
-```text
-Automatic-Irrigation-System/
-│
-├── Arduino_Code/
-│   └── Automatic_Irrigation_System.ino
-│
-├── Images/
-│   ├── circuit_model.jpeg
-│   ├── decorated_project.jpeg
-│   ├── dry_condition.jpeg
-│   ├── dry_lcd.jpeg
-│   ├── wet_condition.jpeg
-│   └── wet_lcd.jpeg
-│
-└── README.md
-```
-
----
-
 ## 🚀 Future Improvements
 
 - IoT-based monitoring using ESP8266/ESP32
