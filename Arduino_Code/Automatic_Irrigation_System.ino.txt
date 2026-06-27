@@ -1,25 +1,3 @@
-/*
-==========================================================
-Project : Automatic Irrigation System Using Arduino Nano
-
-Team    : Eternal Voltage
-
-Members:
-- Md. Abdullah Al Sami Mirza
-- Joyosree Roy Joya
-- Puja Banik Trina
-- Abdul Hamid
-- Fahim Ahmed
-- Samia Jannat Ahana
-
-Description:
-This project monitors soil moisture and automatically
-controls a water pump using Arduino Nano.
-
-Developed for academic purposes.
-==========================================================
-*/
-
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 
