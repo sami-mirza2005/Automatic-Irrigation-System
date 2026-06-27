@@ -1,0 +1,105 @@
+/*
+==========================================================
+Project : Automatic Irrigation System Using Arduino Nano
+
+Team    : Eternal Voltage
+
+Members:
+- Md. Abdullah Al Sami Mirza
+- Joyosree Roy Joya
+- Puja Banik Trina
+- Abdul Hamid
+- Fahim Ahmed
+- Samia Jannat Ahana
+
+Description:
+This project monitors soil moisture and automatically
+controls a water pump using Arduino Nano.
+
+Developed for academic purposes.
+==========================================================
+*/
+
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+const int sensor_pin = A0;
+const int relay = 7;
+const int buzzer = 8;
+
+const int normal = 930;
+
+void setup() {
+  pinMode(relay, OUTPUT);
+  pinMode(buzzer, OUTPUT);
+
+  Serial.begin(9600);
+
+  lcd.init();
+  lcd.backlight();
+
+  lcd.setCursor(0, 0);
+  lcd.print("Automatic");
+
+  lcd.setCursor(0, 1);
+  lcd.print("Irrigation");
+
+  delay(2000);
+  lcd.clear();
+
+  lcd.setCursor(0, 0);
+  lcd.print("Created By");
+
+  lcd.setCursor(0, 1);
+  lcd.print("Eternal Voltage");
+
+  delay(2000);
+  lcd.clear();
+}
+
+void loop() {
+
+  int moisture = analogRead(sensor_pin);
+
+  
+  Serial.print("Moisture: ");
+  Serial.print(moisture);
+
+  lcd.clear();
+
+  if (moisture < normal) {
+
+    Serial.println(" --> WET");
+
+    lcd.setCursor(0, 0);
+    lcd.print("Status: WET");
+
+    lcd.setCursor(0, 1);
+    lcd.print("Pump: OFF");
+
+    digitalWrite(relay, HIGH);
+
+    
+
+  }
+  else {
+
+    Serial.println(" --> DRY");
+
+    lcd.setCursor(0, 0);
+    lcd.print("Status: DRY");
+
+    lcd.setCursor(0, 1);
+    lcd.print("Pump: ON");
+
+    digitalWrite(relay, LOW);
+
+    digitalWrite(buzzer, HIGH);
+    delay(300);
+    digitalWrite(buzzer, LOW);
+  }
+
+  delay(500);
+}
