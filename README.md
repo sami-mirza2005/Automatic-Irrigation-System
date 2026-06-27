@@ -1,36 +1,60 @@
 # 🌱 Automatic Irrigation System Using Arduino Nano
 
-An Arduino Nano-based Automatic Irrigation System that monitors soil moisture and automatically controls a water pump to reduce water wastage and minimize manual effort.
+An Arduino Nano-based Automatic Irrigation System that automatically monitors soil moisture and controls a water pump, reducing water wastage and minimizing manual effort.
 
 ---
 
 ## 📖 Overview
 
-This project uses an Arduino Nano and a soil moisture sensor to automate irrigation. When the soil becomes dry, the system automatically turns the water pump ON. Once sufficient moisture is detected, the pump turns OFF.
+This project is designed to automate irrigation using an Arduino Nano and a soil moisture sensor. The system continuously monitors soil moisture and automatically turns the water pump ON when the soil is dry and OFF when the soil becomes sufficiently wet.
+
+This project was developed as part of an academic team project to enhance practical knowledge in Embedded Systems and Automation.
 
 ---
 
 ## ✨ Features
 
-* Automatic soil moisture monitoring
-* Automatic water pump control
-* 16×2 I2C LCD status display
-* Buzzer alert
-* Water-saving automation
-* Simple and low-cost design
+- Automatic soil moisture monitoring
+- Automatic water pump control
+- Real-time LCD status display
+- Buzzer alert
+- Low-cost embedded solution
+- Water-saving irrigation system
 
 ---
 
-## 🛠 Components Used
+## 🛠 Hardware Components
 
-* Arduino Nano
-* Soil Moisture Sensor
-* Relay Module
-* Water Pump
-* 16×2 I2C LCD
-* Buzzer
-* Jumper Wires
-* Power Supply
+- Arduino Nano
+- Soil Moisture Sensor
+- Relay Module
+- Water Pump
+- 16×2 I2C LCD
+- Buzzer
+- Jumper Wires
+- Power Supply
+
+---
+
+## 💻 Software
+
+- Arduino IDE
+- Embedded C (Arduino)
+
+---
+
+## ⚙️ Working Principle
+
+1. The soil moisture sensor continuously reads the moisture level.
+2. Arduino Nano processes the sensor value.
+3. If the soil is **Wet**:
+   - LCD displays **Status: WET**
+   - Water pump remains **OFF**
+4. If the soil is **Dry**:
+   - LCD displays **Status: DRY**
+   - Water pump turns **ON**
+   - Buzzer provides an alert.
+5. The process repeats automatically.
 
 ---
 
@@ -38,78 +62,79 @@ This project uses an Arduino Nano and a soil moisture sensor to automate irrigat
 
 ## 🌿 Final Project
 
-![Decorated Project](Images/decorated_project.jpg)
+![Final Project](Images/decorated_project.jpeg)
 
 ---
 
 ## 🔌 Circuit Model
 
-![Circuit Model](Images/circuit_model.jpg)
+![Circuit Model](Images/circuit_model.jpeg)
 
 ---
 
 ## 💧 Wet Soil Condition
 
-LCD Output:
+### LCD Display
 
-* **Status:** WET
-* **Pump:** OFF
+![Wet LCD](Images/wet_lcd.jpeg)
 
-**LCD Display**
+**Output**
 
-![Wet LCD](Images/wet_lcd.jpg)
+- Status: **WET**
+- Pump: **OFF**
 
-**Project Condition**
+### Actual Project
 
-![Wet Condition](Images/wet_condition.jpg)
+![Wet Condition](Images/wet_condition.jpeg)
 
 ---
 
 ## ☀️ Dry Soil Condition
 
-LCD Output:
+### LCD Display
 
-* **Status:** DRY
-* **Pump:** ON
+![Dry LCD](Images/dry_lcd.jpeg)
 
-**LCD Display**
+**Output**
 
-![Dry LCD](Images/dry_lcd.jpg)
+- Status: **DRY**
+- Pump: **ON**
 
-**Project Condition**
+### Actual Project
 
-![Dry Condition](Images/dry_condition.jpg)
-
----
-
-## ⚙️ Working Principle
-
-1. Read soil moisture using the sensor.
-2. If the soil is **WET**, keep the pump **OFF**.
-3. If the soil is **DRY**, turn the pump **ON**.
-4. Display the current status on the LCD.
-5. Repeat the process continuously.
+![Dry Condition](Images/dry_condition.jpeg)
 
 ---
 
-## 📂 Folder Structure
+## 📂 Repository Structure
 
 ```text
-Automatic-Irrigation-System-Arduino/
+Automatic-Irrigation-System/
 │
 ├── Arduino_Code/
 │   └── Automatic_Irrigation_System.ino
 │
 ├── Images/
-│   ├── decorated_project.jpg
-│   ├── circuit_model.jpg
-│   ├── wet_lcd.jpg
-│   ├── wet_condition.jpg
-│   ├── dry_lcd.jpg
-│   └── dry_condition.jpg
+│   ├── circuit_model.jpeg
+│   ├── decorated_project.jpeg
+│   ├── dry_condition.jpeg
+│   ├── dry_lcd.jpeg
+│   ├── wet_condition.jpeg
+│   └── wet_lcd.jpeg
 │
 └── README.md
 ```
+
+---
+
+## 🚀 Future Improvements
+
+- IoT-based monitoring using ESP8266/ESP32
+- Mobile application integration
+- Cloud data logging
+- Solar-powered irrigation
+- Multiple soil moisture sensors
+- Weather-based irrigation scheduling
 
 ---
 
@@ -117,22 +142,25 @@ Automatic-Irrigation-System-Arduino/
 
 **Team Name:** Eternal Voltage
 
-* Md. Abdullah Al Sami Mirza
-* Joyosree Roy Joya
-* Puja Banik Trina
-* Abdul Hamid
-* Fahim Ahmed
-* Samia Jannat Ahana
+- Md. Abdullah Al Sami Mirza
+- Joyosree Roy Joya
+- Puja Banik Trina
+- Abdul Hamid
+- Fahim Ahmed
+- Samia Jannat Ahana
 
 ---
 
 ## 🙏 Acknowledgements
 
-Special thanks to **Tonmoy Sir** for his valuable guidance and support throughout this project.
+Special thanks to **Tonmoy Sir** for his valuable guidance and continuous support throughout this project.
 
 ---
 
 ## 📄 License
 
-This project was developed for academic and educational purposes.
+This project is developed for **academic and educational purposes**.
 
+---
+
+⭐ If you found this project helpful, please consider giving this repository a star.
